@@ -1,4 +1,4 @@
-# SVVST Website — Documentation
+# SVVST Website - Documentation
 Welcome to the documentation for the Shri Veda Vyasa Seva Trust (SVVST) website. This readme/documentation collects implementation details, how to run and build the project, and notes for making changes without confusion
 
 ## Project overview
@@ -35,7 +35,7 @@ Requirements:
   npm install #to install dependencies
   npm run dev #start dev server
   ```
-- Open the dev server URL printed by Vite (usually http://localhost:5173) and edit files under `src/` — hot module replacement (HMR) will update the browser
+- Open the dev server URL printed by Vite (usually http://localhost:5173) and edit files under `src/` - hot module replacement (HMR) will update the browser
 
 ## Build & preview
 - To produce production assets:
@@ -65,17 +65,17 @@ Requirements:
 
 ## Project structure (key files & folders)
 Top-level (important files):
-- `index.html` — base HTML template, fonts linked here
-- `package.json` — scripts and dependencies
-- `vite.config.js` — Vite configuration (edit `base` for GH Pages if needed)
-- `README.md` — this file
+- `index.html` - base HTML template, fonts linked here
+- `package.json` - scripts and dependencies
+- `vite.config.js` - Vite configuration (edit `base` for GH Pages if needed)
+- `README.md` - this file
 
 `src/` (React app source):
-- `main.jsx` — app entry
-- `App.jsx` — main layout and routing
-- `Hero.jsx`, `Events.jsx`, `Founders.jsx`, `ContactUs.jsx`, `MissionVisionValues.jsx`, `SplitText.jsx` — component files
-- `styles/index.css` — global styles
-- `assets/` — images, `event_data.json`, and subfolders (event images, founders images). Keep images in `assets/`
+- `main.jsx` - app entry
+- `App.jsx` - main layout and routing
+- `Hero.jsx`, `Events.jsx`, `Founders.jsx`, `ContactUs.jsx`, `MissionVisionValues.jsx`, `SplitText.jsx` - component files
+- `styles/index.css` - global styles
+- `assets/` - images, `event_data.json`, and subfolders (event images, founders images). Keep images in `assets/`
 - Notes: Keep the `assets/event-images` naming consistent with how `event_data.json` references images. The components expect images to follow the existing naming conventions
 
 ## Section-specific notes
