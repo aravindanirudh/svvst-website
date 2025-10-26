@@ -32,7 +32,7 @@ Requirements:
 - Node.js (recommend LTS 18+) and npm installed
 - Quickstart (Windows PowerShell):
   ```powershell
-  npm install or #to install dependencies
+  npm install #to install dependencies
   npm run dev #start dev server
   ```
 - Open the dev server URL printed by Vite (usually http://localhost:5173) and edit files under `src/` — hot module replacement (HMR) will update the browser
@@ -47,7 +47,7 @@ Requirements:
   npm run preview
   ```
 
-## Before Hosting
+## Before hosting
 - Change base to the repo name if hosting on GitHub Pages
   ```js
   import { defineConfig } from 'vite'
@@ -109,5 +109,5 @@ Top-level (important files):
 - Images are stored under `src/assets/` and optimized (AVIF/WEBP)
 - Keep using efficient formats when adding assets
 
-## License & contact
+## Contact
 - Project author: [Aravind A Kamath](https://github.com/aravindanirudh)
