@@ -4,7 +4,7 @@ Welcome to the documentation for the Shri Veda Vyasa Seva Trust (SVVST) website.
 
 ## Project overview
 - This is a small static website built with React + Vite to showcase SVVST (Shri Veda Vyasa Seva Trust), Cherthala. The project uses modular React components (JSX files under `src/`) and lightweight CSS for styling
-- The initial version of this site was developed on 15 June 2025. It is continuously being updated and this is not the production repository. The production repository was created for deployment under the email account of Shri Veda Vyasa Seva Trust, Cherthala. So, this might not be up to date. This particular version is the website's state as of 27 October 2025
+- The initial version of this site was developed on 15 June 2025. It is continuously being updated and this is not the production repository. The production repository was created for deployment under the email account of Shri Veda Vyasa Seva Trust, Cherthala. So, this repository might not be up to date. This particular version is the website's state as of 27 October 2025
 - A single `index.css` (under `src/styles/`) is used for global styling; components are separated into individual JSX files for clarity and future extension
 - React was chosen to make future full-stack integration easier if/when required
 - Fonts used: Oswald, Inter, Titillium Web (Google Fonts linked in `index.html`)
