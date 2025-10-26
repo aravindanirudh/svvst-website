@@ -1,5 +1,6 @@
 # SVVST Website - Documentation
 Welcome to the documentation for the Shri Veda Vyasa Seva Trust (SVVST) website. This readme/documentation collects implementation details, how to run and build the project, and notes for making changes without confusion
+- For live demo, check https://www.shrivedavyasatrust.in/
 
 ## Project overview
 - This is a small static website built with React + Vite to showcase SVVST (Shri Veda Vyasa Seva Trust), Cherthala. The project uses modular React components (JSX files under `src/`) and lightweight CSS for styling
