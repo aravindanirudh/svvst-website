@@ -1,0 +1,663 @@
+/* General */
+html {
+	/* Resetting the default box-sizing for better consistency */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* Setting universal font size to be utilised by 'rem' unit */
+    font-size: 16px;
+}
+
+body {
+    background-color: #161718;
+}
+
+*, *::before, *::after {
+	/* Ensuring all elements use the same box-sizing model */
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.horizontal-divider {
+    height: 1px;
+    border-width:0; 
+    background-color:gray
+}
+
+/* Scrollbar styling */
+/* Target the entire scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px; /* for horizontal scrollbar */
+}
+
+/* Track style */
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+/* Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #F27A1A;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f1a363;
+}
+
+/* Hero Section */
+.hero-container {
+    user-select: none;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #161718;
+}
+
+.hero-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 2s ease-in;
+    animation: zoomIn 30s ease-in-out infinite;
+    z-index: 1;
+}
+
+.hero-background.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+@keyframes zoomIn {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.10);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.header-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.75rem 0 0 0;
+}
+
+.header-logo {
+    width: 5rem;
+}
+
+.header-title {
+    font-family: "Oswald", sans-serif;
+    color: whitesmoke;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.middle-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.middle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.split-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-button {
+  position: relative;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  border-radius: 0.50rem;
+  cursor: pointer;
+  border: none;
+  color: whitesmoke;
+  opacity: 1;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+}
+
+.hero-button span {
+  position: relative;
+  z-index: 10;
+  transition: 0.4s;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8em;
+}
+
+.hero-button::before,
+.hero-button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.hero-button::before {
+  content: "";
+  background: #F27A1A;
+  width: 150%;
+  left: -20%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.hero-button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.hero-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+/* Phones */
+@media (max-width: 480px) {
+    .header-div {
+        padding: 1.75rem;
+        gap: 0.25rem;
+    }
+
+    .header-title {
+        font-size: 1.25rem;
+    }
+
+    .split-text {
+        font-size: 2rem;
+    }
+
+    .hero-button {
+        font-size: 1rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 991px) {
+    .header-div {
+        padding: 2rem 1rem 1.75rem 1.75rem;
+    }
+
+    .split-text {
+        font-size: 2.5rem;
+    }
+
+    .hero-button {
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1200px) {
+}
+
+/* Mission, Vision, Values or Ethos Section */
+.MiViVa-main-div {
+    color: whitesmoke;
+    padding: 1rem 1rem 2rem 1rem;
+    background-color: #161718;
+    user-select: none;
+}
+
+.MiViVa-h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.MiViVa-card-container {
+    display: flex;  
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.MiViVa-card {
+    background-color: #1E2125;
+    max-width: fit-content;
+    width: 450px;
+    min-height: 100%;
+    border-radius: 15px;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    padding: 1rem;
+    transition: transform 400ms ease-in-out;
+}
+
+.MiViVa-card-icon {
+    font-size: 3.5rem;
+    transition: transform 400ms ease-in-out;
+}
+
+.MiViVa-card:hover .MiViVa-card-icon {
+  transform: scale(1.1);
+}
+
+.MiViVa-card-h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.MiViVa-card-p {
+    color: #CCCCCC;
+    font-size: 1rem;
+    font-family: "Titillium Web", sans-serif;
+}
+
+.MiViVa-card:hover {
+    transform: scale(1.03);
+}
+
+/* Responsive Design */
+/* Phones */
+@media (max-width: 480px) {
+    .MiViVa-card-container {
+        flex-direction: column;
+    }
+}
+
+/* Tablets */
+@media (min-width: 480px) and (max-width: 991px) {
+}
+
+/* Desktops */
+@media (min-width: 1200px) {
+}
+
+/* Events Section */
+.events-main-div {
+    user-select: none;
+    background-color: hsla(210, 4%, 9%, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.75rem;
+    gap: 0.75rem;
+    padding-bottom: 1.5rem;
+}
+
+.events-heading1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    color: whitesmoke;
+    margin: 0.25rem 0 0.25rem 0;
+}
+
+.event-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    background-color: hsl(213, 11%, 13%);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+    padding-bottom: 1rem;
+    max-width: 450px;
+}
+
+.event-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    outline: 1px solid #F27A1A;
+}
+
+.card-text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.event-card h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
+.event-card p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #cccccc;
+    line-height: 1.4;
+}
+
+.event-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-button {
+    position: relative;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    padding: 0.35rem;
+    color: whitesmoke;
+    background-color: #F27A1A;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.05rem;
+    transition: 150ms ease;
+}
+
+.card-button:hover {
+    background-color: #d3d3d4;
+    color: black;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: #1f1f1f;
+  color: whitesmoke;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 70vw;
+  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-sameline {
+    display: inline-flex;
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 0.75rem;
+}
+
+.modal-close-icon {
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+.modal-image-div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 0 0 1rem 0;
+}
+
+.modal-event-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    align-items: center;
+}
+
+/* Responsive Design */
+/* Phones */
+@media (max-width: 480px) {
+    .events-main-div h1 {
+        font-size: 2.75rem;
+    }
+
+    .event-card {
+        max-width: 90vw;
+    }
+
+    .event-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-text-section {
+        padding: 0.75rem;
+    }
+
+    .modal-content {
+        max-height: 85vh;
+        max-width: 85vw;
+    }
+}
+
+/* Tablets */
+@media (min-width: 480px) and (max-width: 991px) {
+}
+
+/* Desktops */
+@media (min-width: 1200px) {
+}
+
+/* Founders or Founding Trustees Section */
+.founders-main-div {
+    user-select: none;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.founders-main-div h1 {
+    color: whitesmoke;
+    font-family: 'Oswald', sans-serif;
+    user-select: none;
+    margin-bottom: 0.5rem;
+    font-size: 2.75rem;
+    text-align: center;
+    margin-top: 0.75rem;
+}
+
+.founders-main-div img {
+    width: 650px;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+/* Phones */
+@media (max-width: 480px) {
+    .founders-main-div h1 {
+        font-size: 2.5rem;
+    }
+
+    .founders-main-div img {
+        max-width: 85vw;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 991px) {
+    .founders-main-div img {
+        max-width: 75vw;
+    }
+}
+
+/* Contact Us Section */
+.contact-us-main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.75rem;
+    padding-bottom: 1.25rem;
+    background-color: hsla(210, 4%, 9%, 1);
+    color: whitesmoke;
+    font-family: "Titillium Web", sans-serif;
+}
+
+.contact-us-main-div h1 {
+    user-select: none;
+    margin-bottom: 0.50rem;
+    font-family: "Oswald", sans-serif;
+    font-size: 2.75rem;
+    color: whitesmoke;
+}
+
+.contact-us-main-div p {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+.contact-us-internal-div {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.contact-us-text-div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+    min-width: 225px;
+    background-color: #1E2125;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.contact-us-text-div img {
+    width: 150px;
+    border-radius: 5px;
+    margin-bottom: 0.25rem;
+}
+
+.contact-us-title {
+    color: #CCCCCC;
+    font-weight: 300;
+}
+
+.phone-number-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.phone-link p,
+.phone-icon {
+  color: whitesmoke;
+  transition: color 250ms ease;
+}
+
+.phone-link:hover p,
+.phone-link:hover .phone-icon {
+  color: #F27A1A;
+}
+
+.address-div p {
+    text-align: center;
+}
+
+.address-h1 {
+    margin-bottom: 0 !important;
+}
+
+/* Responsive Design */
+/* Phones */
+@media (max-width: 480px) {
+    .contact-us-main-div h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-us-internal-div {
+        flex-direction: column;
+    }
+
+    .address-div .address-h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 991px) {
+    .contact-us-internal-div {
+        flex-wrap: wrap;
+    }
+}
+
+/* Copyright Section */
+.copyright-sec {
+    user-select: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.3rem 2rem;
+    color: whitesmoke;
+    background-color: hsla(210, 4%, 9%, 1);
+}
