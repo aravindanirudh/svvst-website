@@ -16,7 +16,6 @@ Welcome to the documentation for the Shri Veda Vyasa Seva Trust (SVVST) website.
 ## Tech stack
 - Vite (dev server + build)
 - React (JSX)
-- GSAP (for SplitText animation)
 - React Icons
 
 ## Scripts (from `package.json`)
@@ -74,7 +73,7 @@ Top-level (important files):
 `src/` (React app source):
 - `main.jsx` - app entry
 - `App.jsx` - main layout and routing
-- `Hero.jsx`, `Events.jsx`, `Founders.jsx`, `ContactUs.jsx`, `MissionVisionValues.jsx`, `SplitText.jsx` - component files
+- `Hero.jsx`, `Events.jsx`, `Founders.jsx`, `ContactUs.jsx`, `MissionVisionValues.jsx` - component files
 - `styles/index.css` - global styles
 - `assets/` - images, `event_data.json`, and subfolders (event images, founders images). Keep images in `assets/`
 - Notes: Keep the `assets/event-images` naming consistent with how `event_data.json` references images. The components expect images to follow the existing naming conventions
@@ -85,7 +84,7 @@ Top-level (important files):
   1. Add the image file under `src/assets/`
   2. Import it in `Hero.jsx` or where backgrounds are defined
   3. Add the imported image to the `backgrounds` array used for the scrolling animation
-- The main heading animation uses `SplitText` from GSAP
+- Initially, the main heading animation used `SplitText` from GSAP. This was removed as it caused a bug in which after the SplitText animation had been rendered, position of SplitText would change
 
 ### Events section
 - To add a new event:

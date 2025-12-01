@@ -137,9 +137,12 @@ a {
     gap: 0.75rem;
 }
 
-.split-text {
-    font-family: 'Oswald', sans-serif;
+.hero-title {
+    font-family: "Oswald", sans-serif;
+    color: whitesmoke;
     font-size: 3.5rem;
+    text-align: center;
+    font-weight: 400;
 }
 
 .button-container {
@@ -213,7 +216,7 @@ a {
         font-size: 1.25rem;
     }
 
-    .split-text {
+    .hero-title {
         font-size: 2rem;
     }
 
@@ -226,10 +229,6 @@ a {
 @media (min-width: 481px) and (max-width: 991px) {
     .header-div {
         padding: 2rem 1rem 1.75rem 1.75rem;
-    }
-
-    .split-text {
-        font-size: 2.5rem;
     }
 
     .hero-button {
@@ -529,7 +528,7 @@ a {
 /* Phones */
 @media (max-width: 480px) {
     .founders-main-div h1 {
-        font-size: 2.5rem;
+        font-size: 2.15rem;
     }
 
     .founders-main-div img {
@@ -639,7 +638,8 @@ a {
     }
 
     .address-div .address-h1 {
-        font-size: 2.5rem;
+        font-size: 2.15rem;
+        text-align: center;
     }
 }
 

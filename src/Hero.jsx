@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './styles/index.css';
-import SplitText from "./SplitText.jsx";
 import logo from "./assets/logo_saffron.png";
 import bg1 from "./assets/hero_bg_1.avif";
 import bg2 from "./assets/hero_bg_2.avif";
@@ -45,7 +44,7 @@ const Hero = () => {
         </div>
         <div className="middle-section">
           <div className="middle-container">
-            <SplitText text="Building a Better Tomorrow!" className="split-text" delay={30} duration={0.5} ease="power3.out" splitType="chars" from={{ opacity: 0, y: 40}} to={{ opacity: 1, y: 0 }} threshold={0.1} rootMargin="-100px" textAlign="center"/>
+            <h1 className="hero-title">Building a Better Tomorrow!</h1>
             <div className="button-container">
               <a href="#mission-vision-values"><button className="hero-button"><span>Ethos</span></button></a>
               <a href="#events"><button className="hero-button"><span>Events</span></button></a>
